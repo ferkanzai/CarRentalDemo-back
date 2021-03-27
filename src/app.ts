@@ -24,7 +24,7 @@ const configApp = (app: Application) => {
   app.use((error: any, _: Request, res: Response, __: any) => {
     console.log(error);
     res.status(error.code || 500).json({
-      status: 'no ok',
+      success: false,
       info: {
         error,
         message: error.message,
